@@ -36,10 +36,10 @@ class Query extends AbstractQuery
 
     public function getIterator(): iterable
     {
-        foreach (parent::getIterator() as $row) {
+        foreach (parent::getIterator() as $k => $row) {
             unset($row['__dsql_rownum']);
 
-            yield $row;
+            yield $k => $row;
         }
     }
 
