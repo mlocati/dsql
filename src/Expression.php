@@ -116,7 +116,7 @@ class Expression implements Expressionable, \ArrayAccess
     /**
      * @return $this
      */
-    public function getDsqlExpression(Expression $expression): Expression
+    public function getDsqlExpression(self $expression): self
     {
         return $this;
     }
